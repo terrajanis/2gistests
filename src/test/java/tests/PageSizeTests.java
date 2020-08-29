@@ -26,7 +26,6 @@ public class PageSizeTests extends TestBase {
                 body("items[0].country", hasKey("code"));
         ;
 
-
     }
 
     @Test
@@ -45,7 +44,6 @@ public class PageSizeTests extends TestBase {
                 body("items[0]", hasKey("code")).
                 body("items[0].country", hasKey("name")).
                 body("items[0].country", hasKey("code"));
-
 
     }
 
@@ -66,7 +64,6 @@ public class PageSizeTests extends TestBase {
                 body("items[0].country", hasKey("name")).
                 body("items[0].country", hasKey("code"));
 
-
     }
 
     @Test(dataProvider = "negativePageSizeProvider", dataProviderClass = PageSizeProvider.class)
@@ -80,7 +77,6 @@ public class PageSizeTests extends TestBase {
                 statusCode(400).
                 body("error.message", equalTo("Параметр 'page_size' может быть одним из следующих значений: 5, 10, 15"));
 
-
     }
 
     @Test(dataProvider = "negativeIntegerPageSizeProvider", dataProviderClass = PageSizeProvider.class)
@@ -93,7 +89,6 @@ public class PageSizeTests extends TestBase {
                 then().
                 statusCode(400).
                 body("error.message", equalTo("Параметр 'page_size' должен быть целым числом"));
-
 
     }
 

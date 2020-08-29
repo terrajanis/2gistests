@@ -24,7 +24,6 @@ public class PageSizeTests extends TestBase {
                 body("items[0]", hasKey("code")).
                 body("items[0].country", hasKey("name")).
                 body("items[0].country", hasKey("code"));
-        ;
 
     }
 

@@ -9,7 +9,8 @@ public class CountryCodeProvider {
         return new Object[][]{
                 {"by"},
                 {"ру"},
-                {""}
+                {""},
+                {"kz,ru"}
         };
     }
 }

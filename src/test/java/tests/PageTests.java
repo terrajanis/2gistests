@@ -24,7 +24,7 @@ public class PageTests extends TestBase {
 
         response1.statusCode(200);
         response1.body("total", equalTo(response1.extract().jsonPath().getList("items").size()));
-        response1.body("items", equalTo(15));
+        response1.body("items.size()", equalTo(15));
         response1.body("items[0]", hasKey("id"));
         response1.body("items[0]", hasKey("name"));
         response1.body("items[0]", hasKey("code"));
@@ -42,7 +42,7 @@ public class PageTests extends TestBase {
 
         response2.statusCode(200);
         response2.body("total", equalTo(response1.extract().jsonPath().getList("items").size()));
-        response2.body("items", equalTo(15));
+        response2.body("items.size()", equalTo(15));
         response2.body("items[0]", hasKey("id"));
         response2.body("items[0]", hasKey("name"));
         response2.body("items[0]", hasKey("code"));
